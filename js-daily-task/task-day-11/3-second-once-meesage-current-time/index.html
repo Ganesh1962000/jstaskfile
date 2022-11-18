@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Second-Once-Message-curren-Time-Print</title>
+</head>
+<body>
+
+    <script>
+
+        function ganesh(name, lastName) {
+            const time = new Date()
+            document.write(" The time is " + time.toLocaleTimeString());
+            document.write("<br>");
+        }
+
+        // passing argument to setInterval,
+        ganesh=window.setInterval(ganesh, 3000);
+        
+        setTimeout(() => {
+            clearInterval(ganesh)
+        }, 15000);
+
+    </script>
+    
+</body>
+</html>

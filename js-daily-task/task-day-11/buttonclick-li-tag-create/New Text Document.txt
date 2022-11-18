@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Using-li-Tag-Create</title>
+</head>
+<body>
+    <h2 id="idd">Ganesh</h2>
+    <button onclick="order()">Button</button>
+    <script>
+
+        let head=document.getElementById("idd");
+        function order(){
+            
+          let ullist=document.createElement("ul");
+            head.appendChild(ullist);
+          let list1=document.createElement("li");
+                list1.textContent="ganesh";
+                ullist.appendChild(list1);
+                let list2=document.createElement("li");
+                list2.textContent="gopi";
+                list1.appendChild(list2);
+         }
+    //    let keys=prompt("enter a key");
+    //   switch(keys){
+    //     case "+":document.write("hi");
+    //     break;
+    //     case "-":document.write("hello");
+    //     break;
+    //     case "*":document.write("welcome");
+    //     break;
+    //     default:document.write("goback");
+    //     break;
+    //   }
+
+    // for(i=0;i<=4;i++){
+
+    // }
+    // let num=6;
+    // while(num<=10){
+    //   document.write("hi");
+    // }
+
+    </script>
+    
+</body>
+</html>
