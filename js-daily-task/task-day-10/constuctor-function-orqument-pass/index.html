@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constuctor-Function-Orqument-Pass</title>
+</head>
+<body>
+
+    <script>
+
+        // function id(){
+        //     Name="Ganesh",
+        //     Age= 22,
+        //     Profession=" Developer",
+        //     greet=function(){
+        //         console.log('hahaha')
+        //     }
+        // }
+        //     let id1=new id();
+        //     let id2=new id();
+        //     console.log(id1.nmae)
+        //     console.log(id2.greet())
+
+
+        function Person () {
+			this.name = 'Ganesh',
+			this.age = 22,
+            this.profeesion =Developer,
+			this.greet = function () {
+				console.log('hello');
+			}
+		}
+		const person1= new Person();
+		console.log(person1.name);
+    </script>
+    
+</body>
+</html>
