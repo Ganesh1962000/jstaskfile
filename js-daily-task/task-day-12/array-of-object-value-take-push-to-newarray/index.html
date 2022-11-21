@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array-of-object-value-take-push-to-newarray</title>
+</head>
+<body>
+
+    <script>
+        const pass=[
+            {
+                id:1,
+                passengername:"Ganesh",
+                isvegetarianorvegan:"false",
+                connectedflights: 2,
+            },
+            {
+                id:1,
+                passengername:"Gan",
+                isvegetarianorvegan:"false",
+                connectedflights: 2,
+            },
+            {
+                id:1,
+                passengername:"Gopi",
+                isvegetarianorvegan:"false",
+                connectedflights: 2,
+            },{
+                id:1,
+                passengername:"Go",
+                isvegetarianorvegan:"false",
+                connectedflights: 2,
+            }
+        ]
+
+        let a=[];
+
+       pass.forEach(e => {
+        a.push(e.passengername);
+        
+       });
+       console.log(a);
+
+    </script>
+    
+</body>
+</html>
