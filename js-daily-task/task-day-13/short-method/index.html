@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Of-Oject-Value-Taken-By-NewArray-Sort-Method</title>
+</head>
+<body>
+
+    <script>
+
+        let travelers=[
+            {
+                name:"Keerthi",
+                age: 22,
+                id: 10,
+                connectedflights: 4,
+            },
+            {
+                name:"Gajal",
+                age: 22,
+                id: 1,
+                connectedflights: 1,
+            },
+            {
+                name:"Anubama",
+                age: 25,
+                id: 2,
+                connectedflights: 3,
+            },
+            {
+                name:"Nazi",
+                age: 25,
+                id: 5,
+                connectedflights: 2,
+            },
+            {
+                name:"Devika",
+                age: 21,
+                id: 8,
+                connectedflights: 5,
+            },
+            {
+                name:"Bhavani",
+                age: 21,
+                id: 8,
+                connectedflights: 6,
+            }
+        ]
+
+            let newarray=[];
+
+
+           let a=travelers.sort(function(a,b){
+
+                if(a.connectedflights < b.connectedflights) return -1;
+
+                if(a.connectedflights > b.connectedflights) return 1;
+
+                if(a.connectedflights === b.connectedflights) return 0;
+                
+            });
+            console.log(a);
+
+            a.forEach((e)=>{
+                newarray.push(e);
+            })
+            console.log(newarray);
+
+            for(i=0; i<newarray.length; i++){
+                f=newarray[i];
+                console.log(f);
+            }
+        //    let a=[1,10,2,5,25,,3,31,4,];
+        //    a.sort()
+        //    console.log(a);
+
+    </script>
+    
+</body>
+</html>

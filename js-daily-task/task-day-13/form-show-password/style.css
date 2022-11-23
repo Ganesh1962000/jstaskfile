@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainsection{
+    background-color: white;
+    width: 100%;
+    padding-top: 200px;
+    height: 100vh;
+}
+.formsection{
+    background-color: rgb(0,0,0,0.8);
+    color: white;
+    margin:  auto ;
+    padding: 20px 0px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0px 0px 15px red;
+}
+.formsection h1{
+    text-align: center;
+    padding: 10px;
+}
+.inpiut1{
+    width: 100%;
+}
+.name{
+    width: 80%;
+    padding: 15px 5px 0px;
+    margin: 10px 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid red;
+    outline: none;
+    color: white;
+    font-size: 20px;
+}
+.logbutton{
+    padding: 8px 18px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.formicon{
+    font-size: 15px;
+    color: red;
+}
