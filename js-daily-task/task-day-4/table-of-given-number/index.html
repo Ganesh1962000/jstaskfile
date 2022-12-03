@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse-A-Number</title>
+    <title>Print-Table-Given-Number</title>
 </head>
 <body>
-
-    <script>
-
-        let a=parseInt(prompt("Enter Number"))
-            while(a>0){
-                let rm=a%10;
-                a=(a-rm)/10;
-                document.write(rm)
-            }
-            
-
-    </script>
     
+    <script>
+        let num=parseInt(prompt("Enter a Number"))
+
+        for(i=1; i<=10; i++){
+            d=i*num;
+            document.write(i+"*"+num+"="+d)
+            document.write("<br>")
+            
+        }
+        
+    </script>
+
 </body>
 </html>

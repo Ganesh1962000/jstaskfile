@@ -1,0 +1,50 @@
+ *{
+    margin : 0;
+    padding: 0;
+}
+/*
+body{
+    background-color: aqua;
+}
+table{
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    box-shadow: red 0px 5px 20px;
+}
+button{
+    width: 100%;
+    padding: 15px;
+    font-size: 2rem;
+    background-color: white;
+}
+input{
+    width: 100%;
+    padding: 20px 0px;
+    font-size: 20px;
+    border: 2px solid black;
+} */
+
+.hole{
+    box-shadow: red 0px 0px 10px;
+    width: ;
+    background-color: white;
+}
+input{
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 2rem !important;
+    border-radius: 10px;
+    background-color: ;
+}
+button{
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+button:hover{
+    background-color: aqua;
+    
+}

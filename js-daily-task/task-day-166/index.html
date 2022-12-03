@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- <table>
+        <tr>
+            <td colspan="3"><input type="text"></td>
+            <td width="20%"><button>^></button></td>
+        </tr>
+        <tr>
+            <td><button>#</button></td>
+            <td><button>/</button></td>
+            <td><button>$</button></td>
+            <td><button>&</button></td>
+        </tr>
+        <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>+</button></td>
+        </tr>
+        <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>-</button></td>
+        </tr>
+        <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>*</button></td>
+        </tr>
+        <tr>
+            <td><button>%</button></td>
+            <td><button>0</button></td>
+            <td><button>.</button></td>
+            <td><button>=</button></td>
+        </tr>
+        
+    </table> -->
+
+
+
+    <section>
+        <div class="container1">
+            <div class="container">
+
+                <div class="hole mt-5 p-5">
+                    <div class="count rounded-top text-end ">
+                        <div class="container">
+                            <div class="count ">
+                                <input class="shadow mb-5" id="display" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="number">
+
+                        <div class="row ">
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touchac" onclick="clears('')">AC</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num2 text-center fs-2 mb-3 shadow" id="touchdel" onclick="del('')">Del</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow "id="touch" onclick="getvalue('%')">%</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num3 text-center fs-2 mb-3 shadow" id="divition" onclick="getvalue('/')">/</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 btn1">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="no7" onclick="getvalue('7')">7</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch17" onclick="getvalue('8')">8</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch18" onclick="getvalue('9')">9</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow" id="touch19" onclick="getvalue('*')">x</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch4" onclick="getvalue('4')">4</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch5" onclick="getvalue('5')">5</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch6" onclick="getvalue('6')">6</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow" id="sup" onclick="getvalue('-')">-</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch8" onclick="getvalue('1')">1</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch9" onclick="getvalue('2')">2</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="touch10" onclick="getvalue('3')">3 </button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow" id="adition" onclick="getvalue('+')">+</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 btn1">
+                                <button class="num1 text-center fs-2 mb-3 shadow" id="dot" onclick="getvalue('.')">.</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num2 text-center fs-2 mb-3 shadow" id="touch12" onclick="getvalue('0')">0</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow" id="" onclick="getvalue('00')">00</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="num4 text-center fs-2 mb-3 shadow" id="equalto" onclick="Calculate()">=</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>  
+
+    </section>
+        
+        
+
+    <script>
+
+        //Display Panna Concatination Use Pannanum 
+
+        let get = document.getElementById("display");
+
+        let getvalue=(call)=>{
+            get.value+=call;
+        }
+
+        //Values Aa Correct Aaa Operation Panna
+
+        function Calculate(){
+            try{
+                get.value=eval(get.value)
+            }
+            catch(err){
+                alert("invalid")
+            }
+        }
+
+        //One One Aa Delete Panna 
+
+        function del(){
+            get.value=get.value.slice(0,-1)
+        }
+
+
+        //Full Aa Delete Aaga Clears Use Pannanum
+
+        function clears(){
+            get.value="";
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

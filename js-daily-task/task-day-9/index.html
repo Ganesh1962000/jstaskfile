@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two-Equal-&-Three-Equal</title>
+    <title>Array-of-Object</title>
 </head>
 <body>
 
     <script>
-        var a=[1,2,3,4,10];
-        console.log(a);
-        var b= a.slice(1,3,4,'eeeee');
-        console.log(a);
-        console.log(b);
+
+        const value=[{
+            Name:"Ganesh",
+            Age: 22,
+            Profession:" Developer",
+        }]
+         for(let ganesh of value){
+            console.log(ganesh);
+         }
 
     </script>
+
+
     
 </body>
 </html>
