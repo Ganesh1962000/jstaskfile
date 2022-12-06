@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input-To-Input-Value-Transfer</title>
+</head>
+<body>
+
+    <input type="text" id="inp-1" placeholder="Enter First Value">
+
+    <button id="but">Click</button><br>
+
+
+    <input type="text" id="inp-2" placeholder="Enter Second Value">
+
+    <script>
+
+        let a=document.getElementById("but")
+        but.addEventListener("click", hello)
+
+        function hello(){
+            let b=document.getElementById("inp-1").value
+            document.getElementById("inp-2").value=b;
+    
+        }
+
+    </script>
+
+    
+</body>
+</html>
