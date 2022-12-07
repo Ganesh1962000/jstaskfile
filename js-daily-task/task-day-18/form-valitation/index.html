@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Valitation</title>
+</head>
+<body>
+
+    <div>
+            <h1>Form-Valitation</h1>
+            <label for="">Bill Amount</label>
+            <input type="number" id="inp1" plqaceholder="Enter your Bill" ><br><br>
+            <label for="">Tips Percentage</label>
+            <input type="number" id="inp2" plqaceholder="Enter your Tips" ><br><br>
+            <label for="">Tips Amount</label>
+            <input type="number" id="inp3" plqaceholder="Enter your Tips Amount" disabled><br><br>
+            <label for="">Total Amount</label>
+            <input type="number" id="inp4" plqaceholder="Total Amount" disabled><br><br>
+            <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+
+        let but=document.getElementById("btn");
+        but.addEventListener("click",billfunction);
+
+        function billfunction(){
+            if(inp1==""){
+                alert("Enter Only Number")
+            }
+            else if(inp2==""){
+                alert("Enter Only Tips")
+            }
+            let bill=document.getElementById("inp1").value;
+            let tipper=document.getElementById("inp2").value;
+            let tipam=(tipper/100*bill);
+            let total=(parseInt(bill)+parseInt(tipam));
+            document.getElementById("inp3").value=tipam;
+            document.getElementById("inp4").value=total;
+        }
+        
+
+        
+    </script>
+    
+</body>
+</html>
