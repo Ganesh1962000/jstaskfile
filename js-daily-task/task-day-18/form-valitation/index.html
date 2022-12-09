@@ -27,14 +27,30 @@
         but.addEventListener("click",billfunction);
 
         function billfunction(){
-            if(inp1==""){
-                alert("Enter Only Number")
-            }
-            else if(inp2==""){
-                alert("Enter Only Tips")
-            }
+            
             let bill=document.getElementById("inp1").value;
             let tipper=document.getElementById("inp2").value;
+
+            if(h=="" || w==""){
+			text="Enter the Amount";
+			document.getElementById("error").innerHTML=text;
+		}
+		else{
+			if(h>=0 && w>=0){
+				tip=(w/100)*h
+				document.getElementById("tipamo").value=tip;
+			
+				result=(parseInt(h)+parseInt(tip))
+				document.getElementById("total").value= result;	
+			
+			}
+			else{
+				text="Enter the Number no String";
+				document.getElementById("error").innerHTML=text;
+			}
+		}
+	}
+
             let tipam=(tipper/100*bill);
             let total=(parseInt(bill)+parseInt(tipam));
             document.getElementById("inp3").value=tipam;
