@@ -1,0 +1,122 @@
+/* section{
+    width: 500px;
+    height: 500px;
+    border:2px solid black;
+    position: relative;
+}
+.box{
+    width:50px;
+    line-height: 50px;
+    background: orange;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+.lad1{
+    width:80px;
+    position: absolute;
+    top:10px;
+    
+}
+.snake1{
+    width:120px;
+    position: absolute;
+    top:0;
+}
+h1{
+    width: 8%;
+    height: 10vh;
+    border: 2px solid red;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+} */
+
+/*---------------------*/
+/* #canvas {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  
+  #board {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  .square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: sandybrown;
+    border: 2px solid;
+  }
+  .player {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid;
+  } */
+
+/*--------------------------------------------*/
+
+
+.board-out {
+    width: auto;
+    text-align: center;
+    background: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cube {
+    background: orange;
+    border-color: black;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    margin: 5px 1px 1px 1px;
+}
+.cube-row {
+    display: inline-flex;
+}
+.number {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: white;
+}
+.butn {
+    margin-top: 7px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 20px;
+}
+
+.dicebutn {
+    text-align :center;
+    background: #527699;
+    border-color: black;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    margin: 50px 10px 10px 100px;
+}
+.snake-head {
+    background: green;
+}
+.snake-tail {
+    background : brown;
+}
+.ladder-start {
+    background: blue;
+}
+.ladder-end {
+    background: pink;
+}
+
+
+
