@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-Method</title>
+</head>
+<body>
+
+    <script>
+    //    function myDisplayer() {
+    //     console.log("Hello")
+    //     }
+
+    //     function myFirst() {
+    //     myDisplayer();
+    //     }
+
+    //     function mySecond() {
+    //     myDisplayer();
+    //     }
+
+    //     myDisplayer();
+    //     myFirst();
+    //     mySecond();
+
+    let count=true;
+    let count2=false;
+	
+	let callback = new Promise(function(resolve,reject){
+		if(count){
+			resolve("sucess")
+		}
+		else{
+			reject("error")
+		}
+	});
+	callback.then(function successful(result){
+	console.log(result);
+	});
+    callback.catch(function successful(result){
+	console.log(result);
+	});
+
+</script>
+        
+</body>
+</html>
