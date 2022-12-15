@@ -4,46 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promise-Method</title>
+    <title>Promise-Methods</title>
 </head>
 <body>
 
     <script>
-    //    function myDisplayer() {
-    //     console.log("Hello")
-    //     }
 
-    //     function myFirst() {
-    //     myDisplayer();
-    //     }
+        //--------Promise Method
 
-    //     function mySecond() {
-    //     myDisplayer();
-    //     }
+        // function fun1(){
+        //     return new Promise (function(resolve,reject){
+        //         setTimeout(function () {
+        //            resolve("Success");
+        //         },3000)
+        //     });
+        // }
+        // fun1()
+        // .then(function(res){
+        //     console.log(res);
+        // })
+        // .catch(function(err){
+        //     console.log(err);
+        // });
 
-    //     myDisplayer();
-    //     myFirst();
-    //     mySecond();
+        //---------Promise Chaining
 
-    let count=true;
-    let count2=false;
-	
-	let callback = new Promise(function(resolve,reject){
-		if(count){
-			resolve("sucess")
-		}
-		else{
-			reject("error")
-		}
-	});
-	callback.then(function successful(result){
-	console.log(result);
-	});
-    callback.catch(function successful(result){
-	console.log(result);
-	});
+        function fun1(){
+            return new Promise (function(resolve,reject){
+                setTimeout(function () {
+                   resolve("Success");
+                   fun2()
+                },3000)
+            });
+        }
 
-</script>
+        function fun2(){
+            return new Promise (function(resolve,reject){
+                setTimeout(function () {
+                   reject("errrr");
+                },2000)
+            });
+        }
+
+
+        fun1()
+        .then(function(res){
+            console.log(res);
+            fun2()
+            .then(function(res1){
+                console.log(res1);
+            })
+            .catch(function(err1){
+                console.log(err1);
+            });
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+
+       
+    </script>
         
 </body>
 </html>
