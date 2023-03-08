@@ -10,17 +10,26 @@
     
     <script>
 
-        for(i=65; i<=73; i++){
-            for(k=72; k>=i; k--){
-                document.write("&nbsp");
+        // for(i=65; i<=73; i++){
+        //     for(k=72; k>=i; k--){
+        //         document.write("&nbsp");
+        //     }
+        //     for(j=65; j<=i; j++){
+        //         if(i%2==0){
+        //             continue;
+        //         }
+        //         document.write(String.fromCharCode(j));
+        //     }
+        //     document.write("<br>");
+        // }
+
+       
+        for(let i=0; i>=5; i++){
+
+            for(let j=0; j>=5; j++){
+                document.write(j)
             }
-            for(j=65; j<=i; j++){
-                if(i%2==0){
-                    continue;
-                }
-                document.write(String.fromCharCode(j));
-            }
-            document.write("<br>");
+            document.write(i)  
         }
             
     </script>
