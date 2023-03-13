@@ -8,7 +8,29 @@
 </head>
 <body>
 
+    <input type="number" id="input">
+
+    <button onclick="clickFun()">Click</button>
+
+    <p id="para"></p>
+
+   
+
     <script>
+
+        let input= document.getElementById("input");
+        let p = document.getElementById("para")
+        
+        function clickFun(){
+            let n= input.value;
+            for(i=1; i<=n; i++){
+                let num = document.createElement("input")
+                num.setAttribute("type", "checkbox");
+                p.appendChild(num);
+                console.log(i);
+            }
+        }
+        
 
         //----pyramid Methods
 
@@ -197,18 +219,18 @@
 
         ////----------
         
-        let n=10;
-        let string="";
-        let count=1;
+        // let n=10;
+        // let string="";
+        // let count=1;
 
-        for(i=1; i<=n; i++){
-            for(j=1; j<=i; j++){
-                string += count;
-                count++
-            }
-            string+="<br>"
-        }
-        document.write(string)
+        // for(i=1; i<=n; i++){
+        //     for(j=1; j<=i; j++){
+        //         string += count;
+        //         count++
+        //     }
+        //     string+="<br>"
+        // }
+        // document.write(string)
 
         
 
