@@ -18,19 +18,24 @@
 
     <script>
 
+        ////-------Task
+
         let input= document.getElementById("input");
         let p = document.getElementById("para")
         
         function clickFun(){
             let n= input.value;
+
             for(i=1; i<=n; i++){
                 let num = document.createElement("input")
                 num.setAttribute("type", "checkbox");
                 p.appendChild(num);
                 console.log(i);
             }
+            input.value="";
         }
-        
+    
+
 
         //----pyramid Methods
 
