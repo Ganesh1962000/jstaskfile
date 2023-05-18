@@ -12,17 +12,24 @@
 
     <h2>This is a heading</h2>
 
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+    <p id="first">This is a paragraph.</p>
+    <p id="exta">This is another paragraph.</p>
+    <p id="exta1">This is another paragraph.</p>
+    <input type="text" id="input">
 
     <button>Click</button>
 
     <script>
         $(document).ready(function(){
             $("button").click(function(){
-                $("p").hide();
+                $("#first").hide()
+                $("#exta").html("<b>Ganesh</b>");
+                $("#exta1").text("Hello World");
+                $("#input").val("Ganesh");
             })
         })
+
+        
     </script>
     
 </body>
