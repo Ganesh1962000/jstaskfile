@@ -12,22 +12,58 @@
 
     <h2>This is a heading</h2>
 
-    <p id="first">This is a paragraph.</p>
+    <!-- <p id="first">This is a paragraph.</p>
     <p id="exta">This is another paragraph.</p>
     <p id="exta1">This is another paragraph.</p>
     <input type="text" id="input">
 
-    <button>Click</button>
+    <button>Click</button> -->
+
+    <form action="">
+        
+        <label>First name: <input type="text" name="FirstName" value="Mickey"></label><br>
+        <label>Last name: <input type="text" name="LastName" value="Mouse"></label><br>
+        <label>Mobile No: <input type="number" name="Mobile No" value="Mickey"></label><br>
+        <label>Email: <input type="email" name="Email" ></label><br>
+        <label>Id: <input type="number" name="Id" value="Mickey"></label><br>
+        <label> Role Number: <input type="number" name=" Role Number" value="Mouse"></label><br>
+
+    </form>
+
+        <button>Serialize form values</button>
+
+        <div></div>
 
     <script>
+
         $(document).ready(function(){
             $("button").click(function(){
-                $("#first").hide()
-                $("#exta").html("<b>Ganesh</b>");
-                $("#exta1").text("Hello World");
-                $("#input").val("Ganesh");
+                $("div").text($("form").serialize())
             })
         })
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         $("#first").hide()
+        //         $("#exta").html("<b>Ganesh</b>");
+        //         $("#exta1").text("Hello World");
+        //         $("#input").val("Ganesh");
+        //     })
+        // })
+
+        // $(document).ready(function(){
+
+        //     $("input").on("focus",foevt)
+        //             .on("blur",blevt);
+
+        //     function blevt(){
+        //         $("input").css("background-color","red")
+        //     }
+        //     function foevt(){
+        //         $("input").css("background-color","yellow")
+        //     }
+
+        // })
 
         
     </script>
