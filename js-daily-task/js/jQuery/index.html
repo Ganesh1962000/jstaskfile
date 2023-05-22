@@ -19,10 +19,10 @@
 
     <button>Click</button> -->
 
-    <form action="">
+    <form action="" id="loginForm">
         
-        <label>First name: <input type="text" name="FirstName" value="Mickey"></label><br>
-        <label>Last name: <input type="text" name="LastName" value="Mouse"></label><br>
+        <label>First name: <input type="text" name="FirstName" ></label><br>
+        <label>Last name: <input type="text" name="LastName" ></label><br>
         <label>Mobile No: <input type="number" name="Mobile No" value="Mickey"></label><br>
         <label>Email: <input type="email" name="Email" ></label><br>
         <label>Id: <input type="number" name="Id" value="Mickey"></label><br>
@@ -38,8 +38,24 @@
 
         $(document).ready(function(){
             $("button").click(function(){
-                $("div").text($("form").serialize())
+                // $("div").text($("form").serialize())
+
+                var formData  = {};
+                var loginForm = $('#loginForm').serialize();
+                var splitData = loginForm.split('&');
+                //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                for(var i=0; i<splitData.length; i++){
+                    var pair = splitData[i].split('=');
+                    var name = decodeURIComponent(pair[0]);
+                    var value = decodeURIComponent(pair[1]);
+                    formData[name] = value;
+                }
+
+                $("div").innerHtml=formData;
+                console.log(formData);
             })
+
+           
         })
 
         // $(document).ready(function(){
