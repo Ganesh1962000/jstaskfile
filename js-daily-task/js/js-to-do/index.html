@@ -21,7 +21,7 @@
 
     <div class="form-container">
         <form action="">
-           <div>
+            <div>
                 <label for="">UserName :
                     <input type="text" id="name" onchange="">
                 </label>
@@ -53,24 +53,61 @@
         let email     = document.getElementById("email");
         let password  = document.getElementById("password");
         let submitBtn = document.getElementById("submit");
-        let updateBtn = document.getElementById("update")
+        let updateBtn  = document.getElementById("update");
+        let formData = [];
 
     
-        function getDatas(){
+        function getDatas(e){
+
+            // e.preventDefault();
+
+            let response = checkEmpty();
+
+            if(response != "encountered"){
+                formData.forEach((element)=>{
+                    if(element.value == email.value){
+                        alert("Email is Already Exists")
+                        formData.pop();
+                    }
+                })
+
+                let userData = {
+                    "Name": name.value,
+                    "Email": email.value,
+                    "Password": password.value
+                }
+                formData.push(userData);
+                console.log(formData);
+               // resetForm()
+                
+            }
             
         }
 
-    
-        let formData = [];
-        console.log(formData);
-        let userData = {
-            "Name": name.value,
-            "Email": email.value,
-            "Password": password.value
-        }
-        console.log(userData);
 
-        //formData.push(userData)
+        function checkEmpty(){
+            if(name.value == "" || email.value == "" || password.value == "" ){
+                if(name.value == ""){
+                    alert("Name Filed is Empty");
+                }
+                if(email.value == ""){
+                    alert("Email Filed is Empty");
+                }
+                if(password.value == ""){
+                    alert("Password Filed is Empty");
+                }
+
+                return "encountered"
+            }
+        }
+
+        function resetForm(){
+            name.value = "";
+            email.value = "";
+            password.value = "";
+        }
+
+    
 
 
 
