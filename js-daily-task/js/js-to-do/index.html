@@ -13,6 +13,13 @@
             gap: 1rem;
             flex-direction: column;
         }
+        p{
+            display: none;
+        }
+        .active{
+            display: block;
+            color: red;
+        }
        
     </style>
 </head>
@@ -25,6 +32,7 @@
                 <label for="">UserName :
                     <input type="text" id="name" onchange="">
                 </label>
+                <p id="p-tag">Fill the Name</p>
             </div>            
             <div>
                 <label for="">Email :
@@ -57,6 +65,10 @@
                     <th>Edit-Delete</th>
                 </tr>
             </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
         </table>
     </div>
 
@@ -70,6 +82,7 @@
         let password  = document.getElementById("password");
         let submitBtn = document.getElementById("submit");
         let updateBtn = document.getElementById("update");
+        let tableBody = document.getElementById("tableBody");
         let formData  = [];
 
     
@@ -94,17 +107,19 @@
                 }
                 formData.push(userData);
                 console.log(formData);
-               // resetForm()
+                resetForm()
                 
             }
             
         }
 
+        //-----CheckEmpty Function 
 
         function checkEmpty(){
             if(name.value == "" || email.value == "" || password.value == "" ){
                 if(name.value == ""){
-                    alert("Name Filed is Empty");
+                   // alert("Name Filed is Empty");
+                   ppp();
                 }
                 if(email.value == ""){
                     alert("Email Filed is Empty");
@@ -117,13 +132,33 @@
             }
         }
 
+        //-----ResetForm Function
+
         function resetForm(){
             name.value = "";
             email.value = "";
             password.value = "";
         }
 
-    
+        //-----Dom Loop
+
+        function domloop(){
+
+            formData.forEach((dom,i) => {
+
+                let tr = document.createElement("tr")
+                tr.setAttribute();
+                let tdIndex = document.createElement("td");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+
+                
+            })
+
+
+
+        }
 
 
 
