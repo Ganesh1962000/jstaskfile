@@ -61,6 +61,17 @@
                     formData[name] = value;
                 }
 
+                var formData  = {};
+                var loginForm = $('#loginForm').serialize();
+                var splitData = loginForm.split('&');
+                //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                for(var i=0; i<splitData.length; i++){
+                    var pair = splitData[i].split('=');
+                    var name = decodeURIComponent(pair[0]);
+                    var value = decodeURIComponent(pair[1]);
+                    formData[name] = value;
+                }
+
                 $("div").innerHtml=formData;
                 console.log(formData);
             })
