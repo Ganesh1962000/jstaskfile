@@ -43,7 +43,8 @@
 
                 var formData  = {};
                 var loginForm = $('#loginForm').serialize();
-                var splitData = loginForm.split('&');
+                var splitData = loginForm
+                console.log(splitData);
                 //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
                 for(var i=0; i<splitData.length; i++){
                     var pair = splitData[i].split('=');
@@ -52,9 +53,6 @@
                     formData[name] = value;
                 }
                 
-
-                $("div").innerHtml=formData;
-                console.log(formData);
                 $("div").innerHtml=formData;
                 console.log(formData);
             })
