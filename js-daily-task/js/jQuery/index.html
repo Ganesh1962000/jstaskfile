@@ -23,42 +23,59 @@
         
         <label>First name: <input type="text" name="FirstName" ></label><br>
         <label>Last name: <input type="text" name="LastName" ></label><br>
-        <label>Mobile No: <input type="number" name="Mobile No" value="Mickey"></label><br>
+        <label>Mobile No: <input type="number" name="Mobile No" ></label><br>
         <label>Email: <input type="email" name="Email" ></label><br>
-        <label>Id: <input type="number" name="Id" value="Mickey"></label><br>
-        <label> Role Number: <input type="number" name=" Role Number" value="Mouse"></label><br>
+        <label>Id: <input type="number" name="Id" ></label><br>
+        <label> Role Number: <input type="number" name=" Role Number" ></label><br>
 
     </form>
 
         <button>Serialize form values</button>
 
         <div></div>
-        <div></div>
 
     <script>
-
         $(document).ready(function(){
             $("button").click(function(){
-                // $("div").text($("form").serialize())
+                let formData = {};
+                let loginForm = $("#loginForm").serialize();
+                let splitData = loginForm.split("&");
 
-                var formData  = {};
-                var loginForm = $('#loginForm').serialize();
-                var splitData = loginForm
-                console.log(splitData);
-                //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-                for(var i=0; i<splitData.length; i++){
-                    var pair = splitData[i].split('=');
-                    var name = decodeURIComponent(pair[0]);
-                    var value = decodeURIComponent(pair[1]);
+                for(i=0; i<splitData.length; i++){
+                    let pair = splitData[i].split("=");
+                    let name = decodeURIComponent(pair[0]);
+                    let value = decodeURIComponent(pair[1]);
                     formData[name] = value;
                 }
-                
-                $("div").innerHtml=formData;
+
                 console.log(formData);
             })
+        })
+
+        // $(document).ready(function(){
+        //     $("button").click(function(){
+        //         // $("div").text($("form").serialize())
+
+        //         var formData  = {};
+        //         var loginForm = $('#loginForm').serialize();
+        //         console.log(loginForm);
+        //         var splitData = loginForm.split('&');
+        //         console.log(splitData);
+        //         //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        //         for(var i=0; i<splitData.length; i++){
+        //             var pair = splitData[i].split('=');
+        //             console.log(pair);
+        //             var name = decodeURIComponent(pair[0]);
+        //             var value = decodeURIComponent(pair[1]);
+        //             formData[name] = value;
+        //         }
+                
+        //         $("div").text=formData;
+        //         console.log(formData);
+        //     })
 
            
-        })
+        // })
 
         // $(document).ready(function(){
         //     $("button").click(function(){
