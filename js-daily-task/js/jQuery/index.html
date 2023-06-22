@@ -33,49 +33,35 @@
         <button>Serialize form values</button>
 
         <div></div>
+        <div></body>div>
 
     <script>
+
+
         $(document).ready(function(){
             $("button").click(function(){
-                let formData = {};
-                let loginForm = $("#loginForm").serialize();
-                let splitData = loginForm.split("&");
+                // $("div").text($("form").serialize())
 
-                for(i=0; i<splitData.length; i++){
-                    let pair = splitData[i].split("=");
-                    let name = decodeURIComponent(pair[0]);
-                    let value = decodeURIComponent(pair[1]);
+                var formData  = {};
+                var loginForm = $('#loginForm').serialize();
+                console.log(loginForm);
+                var splitData = loginForm.split('&');
+                console.log(splitData);
+                //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                for(var i=0; i<splitData.length; i++){
+                    var pair = splitData[i].split('=');
+                    console.log(pair);
+                    var name = decodeURIComponent(pair[0]);
+                    var value = decodeURIComponent(pair[1]);
                     formData[name] = value;
                 }
-
+                
+                $("div").html(<h1>formData</h1>)
                 console.log(formData);
             })
-        })
-
-        // $(document).ready(function(){
-        //     $("button").click(function(){
-        //         // $("div").text($("form").serialize())
-
-        //         var formData  = {};
-        //         var loginForm = $('#loginForm').serialize();
-        //         console.log(loginForm);
-        //         var splitData = loginForm.split('&');
-        //         console.log(splitData);
-        //         //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-        //         for(var i=0; i<splitData.length; i++){
-        //             var pair = splitData[i].split('=');
-        //             console.log(pair);
-        //             var name = decodeURIComponent(pair[0]);
-        //             var value = decodeURIComponent(pair[1]);
-        //             formData[name] = value;
-        //         }
-                
-        //         $("div").text=formData;
-        //         console.log(formData);
-        //     })
 
            
-        // })
+        })
 
         // $(document).ready(function(){
         //     $("button").click(function(){
