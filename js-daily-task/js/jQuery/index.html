@@ -12,14 +12,15 @@
 
     <h2>This is a heading</h2>
 
-    <!-- <p id="first">This is a paragraph.</p>
+    <p id="first">This is a paragraph.</p>
     <p id="exta">This is another paragraph.</p>
     <p id="exta1">This is another paragraph.</p>
+    <h2>Ganesh</h2>
     <input type="text" id="input">
 
-    <button>Click</button> -->
+    <button>Click</button>
 
-    <form action="" id="loginForm">
+    <!-- <form action="" id="loginForm">
         
         <label>First name: <input type="text" name="FirstName" ></label><br>
         <label>Last name: <input type="text" name="LastName" ></label><br>
@@ -32,59 +33,62 @@
 
         <button>Serialize form values</button>
 
-        <div></div>
-        <div></body>div>
+        <div></div> -->
 
     <script>
 
 
-        $(document).ready(function(){
-            $("button").click(function(){
-                // $("div").text($("form").serialize())
-
-                var formData  = {};
-                var loginForm = $('#loginForm').serialize();
-                console.log(loginForm);
-                var splitData = loginForm.split('&');
-                console.log(splitData);
-                //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-                for(var i=0; i<splitData.length; i++){
-                    var pair = splitData[i].split('=');
-                    console.log(pair);
-                    var name = decodeURIComponent(pair[0]);
-                    var value = decodeURIComponent(pair[1]);
-                    formData[name] = value;
-                }
-                
-                $("div").html(<h1>formData</h1>)
-                console.log(formData);
-            })
-
-           
-        })
-
         // $(document).ready(function(){
         //     $("button").click(function(){
-        //         $("#first").hide()
-        //         $("#exta").html("<b>Ganesh</b>");
-        //         $("#exta1").text("Hello World");
-        //         $("#input").val("Ganesh");
+        //         // $("div").text($("form").serialize())
+
+        //         var formData  = {};
+        //         var loginForm = $('#loginForm').serialize();
+        //         console.log(loginForm);
+        //         var splitData = loginForm.split('&');
+        //         console.log(splitData);
+        //         //const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        //         for(var i=0; i<splitData.length; i++){
+        //             var pair = splitData[i].split('=');
+        //             console.log(pair);
+        //             var name = decodeURIComponent(pair[0]);
+        //             var value = decodeURIComponent(pair[1]);
+        //             formData[name] = value;
+        //         }
+                
+        //         $("div").html(<h1>formData</h1>)
+        //         console.log(formData);
         //     })
+
+           
         // })
 
-        // $(document).ready(function(){
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#first").hide()
+                $("#exta").html("<b>Ganesh</b>");
+                $("#exta1").text("Hello World");
+                $("#input").val("Ganesh");
+            })
+        })
 
-        //     $("input").on("focus",foevt)
-        //             .on("blur",blevt);
+        $(document).ready(function(){ 
 
-        //     function blevt(){
-        //         $("input").css("background-color","red")
-        //     }
-        //     function foevt(){
-        //         $("input").css("background-color","yellow")
-        //     }
+            $("input").on("focus",foevt)
+                    .on("blur",blevt)
+                    // .on("focus",ccc);
 
-        // })
+            function blevt(){
+                $("input").css({"background-color":"red", "border":"5px solid blue"})
+            }
+            function foevt(){
+                $("input").css("background-color","yellow")
+            }
+            function ccc(){
+                $("input").css("border-color","blue")
+            }
+
+        })
 
 
 
